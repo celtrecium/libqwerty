@@ -17,10 +17,10 @@
  */
 
 #include "../include/qwerty.h"
-#include <termios.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/fcntl.h>
+#include <termios.h>
 #include <u8string.h>
 
 #define UTF8_CODEPOINT_4B 0xF0
@@ -184,7 +184,7 @@ _get_key (int key)
 {
   unsigned int tmp_key = 0;
   qw_key_t retkey;
-  
+
   while (key != EOF)
     {
       tmp_key = (tmp_key * (key > 100 ? 1000 : 100)) + (unsigned int)key;

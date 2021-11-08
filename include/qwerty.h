@@ -47,7 +47,7 @@ typedef enum qw_keycode
     QW_KEY_F10           = 0x7fddd8a6,
     QW_KEY_F11           = 0x7fdde076,
     QW_KEY_F12           = 0x7fdde45e,
-    QW_KEY_UNICODE       = 0x554e4943, /* codl_get_key returns QW_KEY_UNICODE if key is unicode*/ 
+    QW_KEY_UNICODE       = 0x554e4943, /* qw_get_key returns QW_KEY_UNICODE if key is unicode*/ 
     QW_KEY_UC_A          = 0x41, /* Uppercase keys */
     QW_KEY_UC_B          = 0x42,
     QW_KEY_UC_C          = 0x43,
@@ -156,7 +156,7 @@ typedef struct qw_key
 } qw_key_t;
 
 void qw_initialize (void);
-qw_key_t qw_get_key(void);
+qw_key_t qw_get_key (void);
 void qw_end (void);
 
 #endif  /* QWERTY_H */
